@@ -30,7 +30,7 @@ df_net_value_baseline = pd.DataFrame(data=None, columns=['Timestamp',
 #0-1. calculate and get the three dataframes
 for i in range(len(LIST_DICTKEYS)):
     str_key = LIST_DICTKEYS[i]
-    df_results_and_net_value = pd.read_csv(f"../portfolio_files/{str_key}/df_results_and_net_value.csv", index_col=0)
+    df_results_and_net_value = pd.read_csv(f"portfolio_files/{str_key}/df_results_and_net_value.csv", index_col=0)
 
     if i == 0:
         sr_actual_return_for_portfolio = df_results_and_net_value['actual_return_with_switch'].iloc[48 * 60:]
@@ -138,7 +138,7 @@ elif option == 'Status':
                                                                       )
     for i in range(len(LIST_DICTKEYS)):
         str_key = LIST_DICTKEYS[i]
-        sr_status = pd.read_csv(f"../portfolio_files/{str_key}/sr_status.csv", index_col=0)
+        sr_status = pd.read_csv(f"portfolio_files/{str_key}/sr_status.csv", index_col=0)
         df_status.loc[str_key] = sr_status.values.reshape(-1)
     
     st.dataframe(df_status, height=455)
