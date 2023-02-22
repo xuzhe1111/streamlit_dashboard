@@ -129,7 +129,7 @@ if option == 'Charts':
 
 #3-2. 和Status有关的代码
 elif option == 'Status':
-    st.header('Real-time Status of The 12 Subsystems: ')
+    st.header('Real-time Status of the 12 Subsystems: ')
 
     df_status = pd.DataFrame(data=None, index=LIST_DICTKEYS, columns=['actual_position_status', 
                                                                       'n_of_transactions', 
